@@ -6,6 +6,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <errno.h>
+#include <sys/wait.h>
 int main()
 {
 	printf("$");
@@ -24,7 +25,7 @@ int main()
 		cmd = cmd + n_read + 1;
 	}
 	int i_buff = 0;
-	const char * buff[20];
+	const char *buff[20];
 	int back_f = 0;
 	for (int i = 0; i < argc; i++)
 	{
@@ -34,7 +35,7 @@ int main()
 			cpy_stdout = dup(1);
 			int outfd = open(args[i + 1], O_WRONLY | O_CREAT);
 			dup2(outfd, 1);
-			i=i+1;
+			i = i + 1;
 			// printf("hello");
 			// fflush(stdout);
 			// dup2(cpy_stdout,1);
@@ -45,7 +46,7 @@ int main()
 			cpy_stdin = dup(0);
 			int infd = open(args[i + 1], O_RDONLY);
 			dup2(infd, 0);
-			i=i+1;
+			i = i + 1;
 			// char * temp=malloc(10);
 			// scanf("%s",temp);
 			// fflush(stdin);
@@ -53,15 +54,15 @@ int main()
 			// close(cpy_stdin);
 			// printf("%s",temp);
 		}
-		else if (args[i] == "&")
+		else if (strcmp(args[i],"&")==0)
 			back_f = 1;
 		else
 		{
-			buff[i_buff]=args[i];
-			i_buff=i_buff+1;
+			buff[i_buff] = args[i];
+			i_buff = i_buff + 1;
 		}
 	}
-	buff[i_buff]=NULL;
+	buff[i_buff] = NULL;
 	int pid = fork();
 	if (pid == 0)
 	{
@@ -70,5 +71,10 @@ int main()
 			fflush(stdout);
 			write(cpy_stdout, &errno, sizeof(errno));
 		}
+	}
+	else if(back_f==1)
+	{
+		int status=0;
+		waitpid(pid,&status,0);
 	}
 }

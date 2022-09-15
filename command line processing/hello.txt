@@ -1,1 +1,5 @@
- /usr/bin/env /bin/sh /tmp/Microsoft-MIEngine-Cmd-0fm4rqb.or3  /usr/bin/env /bin/sh /tmp/Microsoft-MIEngine-Cmd-0l4uvoxs.onp ca t /usr/bin/env /bin/sh /tmp/Microsoft-MIEngine-Cmd-mfgk5ld3.liv  /usr/bin/env /bin/sh /tmp/Microsoft-MIEngine-Cmd-wluzmccj.npl  /usr/bin/env /bin/sh /tmp/Microsoft-MIEngine-Cmd-xfjyiytt.tlv 
+cmdlp
+cmdlp.c
+cmdlp.c:Zone.Identifier
+hello.txt
+read.txt
