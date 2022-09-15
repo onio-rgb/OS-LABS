@@ -9,7 +9,7 @@
 #include <sys/wait.h>
 int main()
 {
-	printf("$");
+	printf("$ ");
 	char *cmd = malloc(1024);
 	scanf("%[^\n]%*c", cmd);
 	char *word = malloc(20);
