@@ -1,0 +1,21 @@
+assa
+binarytree.c
+cat
+cat.c
+command line processing
+dlnlist.cpp
+hello.txt
+kill
+kill.c
+linkedlist.c
+lnlist.cpp
+ls
+ls.c
+ls.exe
+main.cpp
+ps
+ps.c
+rm
+rm.c
+wc
+wc.c

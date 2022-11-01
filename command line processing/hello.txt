@@ -1,5 +1,6 @@
-cmdlp
-cmdlp.c
-cmdlp.c:Zone.Identifier
-hello.txt
-read.txt
+total 40
+-rwxr-xr-x 1 root root 20856 Sep 18 22:38 cmdlp
+-rw-r--r-- 1 root root  1860 Sep 18 22:38 cmdlp.c
+-rw-r--r-- 1 root root  1148 Sep 14 21:13 cmdlp.c:Zone.Identifier
+-rw-r--r-- 1 root root   276 Sep 18 22:41 hello.txt
+-rw-r--r-- 1 root root   276 Sep 18 22:44 read.txt
